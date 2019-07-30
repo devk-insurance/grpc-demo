@@ -7,10 +7,11 @@ import org.lognet.springboot.grpc.GRpcService;
 @Slf4j
 @GRpcService(interceptors = {LogInterceptor.class})
 public class GreeterServiceImpl extends GreeterServiceGrpc.GreeterServiceImplBase {
+
     @Override
-    public void sayHello(GreeterServiceOuterClass.HelloRequest request, StreamObserver<GreeterServiceOuterClass.HelloReply> responseObserver) {
+    public void sayHello(HelloRequest request, StreamObserver<HelloReply> responseObserver) {
         String message = "Hello " + request.getName();
-        GreeterServiceOuterClass.HelloReply helloReply = GreeterServiceOuterClass.HelloReply.newBuilder().setMessage(message).build();
+        HelloReply helloReply = HelloReply.newBuilder().setMessage(message).build();
         responseObserver.onNext(helloReply);
         responseObserver.onCompleted();
         log.info("Returning: " + message);

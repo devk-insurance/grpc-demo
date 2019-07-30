@@ -1,6 +1,7 @@
 syntax = "proto3";
 
-package com.devk.grpcdemo.service;
+option java_package = "com.devk.grpcdemo.service";
+option java_multiple_files = true;
 
 // The request message containing the user's name.
 message HelloRequest {

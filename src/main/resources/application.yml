@@ -1,8 +1,8 @@
-spring:
-  devtools:
-    add-properties: false
-    livereload:
-      enabled: false
 grpc:
   enable-reflection: true
   port: 12345
+#spring:
+#  devtools:
+#    add-properties: false
+#    livereload:
+#      enabled: false
