@@ -1,0 +1,11 @@
+language: java
+
+sudo: false
+
+branches:
+  only:
+  - master
+
+jdk:
+  - oraclejdk8
+  - oraclejdk11
